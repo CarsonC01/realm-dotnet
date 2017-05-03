@@ -1,6 +1,8 @@
 1.3.0 (TBD)
 
 ### Breaking Changes
+- `Realm.CreateObject<T>` has been removed. Please use `Realm.Add<T>(T object)` instead. (#1381)
+- `Realm.CreateObject(string className)` now has additional parameter `object primaryKey`. You *must* pass that when creating a new object using the dynamic API. If the object you're creating doesn't have primary key declared, pass `null`. (#1381)
 
 ### Enhancements
 - Case insensitive queries against a string property now use a new index based search. (#1380)
