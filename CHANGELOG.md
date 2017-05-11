@@ -7,6 +7,7 @@
 - `SyncConfiguration` now has an `EnableSSLValidation` property (default is `true`) to allow SSL validation to be specified on a per-server basis. (#1387)
 - Add `RealmConfiguration.ShouldCompactOnLaunch` callback property when configuring a Realm to determine if it should be compacted before being returned. (#1389)
 - Use reachability API to minimize the reconnection delay if the network connection was lost. (#1380)
+- Silence some benign linker warnings on iOS. (#1263)
 
 ### Bug fixes
 - Fixed a bug where `Session.Reconnect` would not reconnect all sessions. (#1380)
